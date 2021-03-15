@@ -6,7 +6,15 @@ namespace ShoppingCarts.Model
 {
     public class Message
     {
-        public string Text { get; set; }
+        private string _Text;
+        public string Text { 
+                            get{ return _Text; }
+                            
+                            set{ _Text = value; }
+                           
+                           }
+        
+        private string _User;
         public string User { get; set; }
     }
 }
