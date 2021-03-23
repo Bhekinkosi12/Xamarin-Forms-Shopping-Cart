@@ -13,6 +13,7 @@ namespace ShoppingCarts.ViewModels
         public bool LastMessageVisible { get; set; } = true;
         public int PendingMessageCount { get; set; } = 0;
         public bool PendingMessageCountVisible { get { return PendingMessageCount > 0; } }
+        
 
         public Queue<Message> DelayedMessages { get; set; } = new Queue<Message>();
         public ObservableCollection<Message> Messages { get; set; } = new ObservableCollection<Message>();
@@ -20,6 +21,8 @@ namespace ShoppingCarts.ViewModels
         public ICommand OnSendCommand { get; set; }
         public ICommand MessageAppearingCommand { get; set; }
         public ICommand MessageDisappearingCommand { get; set; }
+
+
 
         public ChatPageViewModel()
         {
